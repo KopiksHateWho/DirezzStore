@@ -53,7 +53,7 @@
           <h2 class="welcome-title">Selamat Datang di DiRez Store</h2>
           <p class="welcome-text">Nikmati pengalaman top up game yang mudah, aman, dan terpercaya dengan sistem 100% Amanah bersama kami di bulan Ramadan yang mulia</p>
           <div class="welcome-doa">اللهم تقبل منا صيامنا وقيامنا ودعاءنا</div>
-          <p style="color: #d4af85; margin-top: 0.8rem; font-size: 0.95rem;">Ya Allah, terimalah puasa, qiam, dan doa kami</p>
+          <p class="welcome-subtitle">Ya Allah, terimalah puasa, qiam, dan doa kami</p>
           <div class="amanah-badge">✅ 100% Amanah • Terpercaya • Berkah</div>
         </div>
       </section>
@@ -79,13 +79,13 @@
               <p class="event-description-title">💰 Top Up & Dapatkan Kode Redeem!</p>
               <p class="event-description-text">Setiap pembelian di bulan Ramadan, dapatkan kode redeem senilai pembelian Anda untuk pembelian berikutnya!</p>
               
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem;">
-                <button class="event-button" id="btn-scroll-games" style="margin: 0;">
+              <div class="event-buttons-container">
+                <button class="event-button event-button-reset" id="btn-scroll-games">
                   <span class="button-icon">🎁</span>
                   <span class="button-text">Top Up Sekarang</span>
                   <span class="button-arrow">→</span>
                 </button>
-                <button class="event-button" id="btn-web-event" style="margin: 0;">
+                <button class="event-button event-button-reset" id="btn-web-event">
                   <span class="button-icon">🎪</span>
                   <span class="button-text">Web Event</span>
                   <span class="button-arrow">→</span>
@@ -143,7 +143,7 @@
             <input type="text" class="form-input" id="gameId" placeholder="Contoh: 123456789" required>
           </div>
 
-          <div class="form-group" id="serverIdGroup" style="display: none;">
+          <div class="form-group server-id-group" id="serverIdGroup">
             <label class="form-label">🏰 ID Server</label>
             <input type="text" class="form-input" id="serverId" placeholder="Contoh: 1234 atau 5678">
           </div>
@@ -189,14 +189,14 @@
         <button class="footer-button" id="btn-contact-admin">💬 Chat WhatsApp</button>
         <div class="footer-doa">دعاء وصيام وقيام مقبول بإذن الله</div>
         <div class="footer-text">
-          <p>Layanan <span style="color: #f5deb3; font-weight: 900;">Cepat • Aman • Berkah • 100% Amanah</span> ✨</p>
-          <p style="margin-top: 1.2rem;">والسلام عليكم ورحمة الله وبركاته</p>
-          <p style="margin-top: 1.5rem; font-size: 0.9rem;">
-            <span style="background: linear-gradient(135deg, #f5deb3 0%, #e6c9a8 50%, #ffd700 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 900; font-family: 'El Messiri', 'Cairo', sans-serif; text-shadow: 0 0 30px rgba(212, 175, 133, 0.8); filter: drop-shadow(0 0 15px rgba(212, 175, 133, 0.6));">
+          <p>Layanan <span class="footer-text-highlight">Cepat • Aman • Berkah • 100% Amanah</span> ✨</p>
+          <p class="footer-text-arabic">والسلام عليكم ورحمة الله وبركاته</p>
+          <p class="footer-owner-container">
+            <span class="footer-owner-text">
               Owned by Dio Rezky Maulana ✨
             </span>
           </p>
-          <p style="margin-top: 0.8rem; font-size: 0.85rem; opacity: 0.8;">© 2024 DiRez Store. Semua Hak Dilindungi. 🌙</p>
+          <p class="footer-copyright">© 2024 DiRez Store. Semua Hak Dilindungi. 🌙</p>
         </div>
       </div>
     </footer>
@@ -266,7 +266,7 @@
       <div class="receipt-footer">
         <div class="receipt-actions">
           <button class="btn btn-primary" id="btn-receipt-wa">💬 Kirim ke WhatsApp</button>
-          <button class="btn btn-primary" id="btn-receipt-email" style="background: linear-gradient(135deg, #5b9bd5 0%, #4a8bc2 100%); box-shadow: 0 8px 20px rgba(91, 155, 213, 0.25);">📧 Kirim ke Email</button>
+          <button class="btn btn-primary btn-receipt-email" id="btn-receipt-email">📧 Kirim ke Email</button>
           <button class="btn btn-secondary" id="btn-receipt-close">Tutup</button>
         </div>
       </div>
@@ -281,16 +281,16 @@
       </div>
       
       <div id="historyFormSection">
-        <div class="form-group" style="margin-bottom: 1.5rem;">
+        <div class="form-group history-form-group">
           <label class="form-label">📱 Nomor WhatsApp</label>
-          <input type="tel" class="form-input" id="historyPhoneInput" placeholder="08123456789" style="margin-bottom: 0.8rem;">
-          <button class="btn btn-primary" id="btn-history-search" style="margin-bottom: 0;">🔍 Cari Pesanan</button>
+          <input type="tel" class="form-input history-phone-input" id="historyPhoneInput" placeholder="08123456789">
+          <button class="btn btn-primary history-search-btn" id="btn-history-search">🔍 Cari Pesanan</button>
         </div>
       </div>
 
-      <div id="historyList" style="max-height: 400px; overflow-y: auto; padding: 1rem 0; display: none;"></div>
+      <div id="historyList" class="history-list"></div>
 
-      <div class="modal-actions" style="margin-top: 1.5rem;">
+      <div class="modal-actions history-actions">
         <button class="btn btn-secondary" id="btn-history-reset">Cari Lagi</button>
         <button class="btn btn-secondary" id="btn-history-close">Tutup</button>
       </div>

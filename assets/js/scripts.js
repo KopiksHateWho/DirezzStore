@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentReceipt = null;
 
   const games = [
-    { id: 'ml', name: 'Mobile Legends', icon: '⚔️', status: '💎 Top Up Instan' },
-    { id: 'ff', name: 'Free Fire', icon: '🔫', status: '🔥 Top Up Instan' },
-    { id: 'pubg', name: 'PUBG Mobile', icon: '🔫', status: '🔫 Top Up Instan' },
-    { id: 'roblox', name: 'Roblox', icon: '🎮', status: '🎮 Top Up Instan' },
-    { id: 'genshin', name: 'Genshin Impact', icon: '✨', status: '✨ Top Up Instan' },
-    { id: 'telegram', name: 'Telegram Stars', icon: '⭐', status: '⭐ Top Up Instan' },
-    { id: 'redfinger', name: 'Redfinger Voucher', icon: '🎟️', status: '🎟️ Top Up Instan' }
+    { id: 'ml', name: 'Mobile Legends', image: 'mobile-legend.jpg', status: '💎 Top Up Instan' },
+    { id: 'ff', name: 'Free Fire', image: 'free-fire.jpg', status: '🔥 Top Up Instan' },
+    { id: 'pubg', name: 'PUBG Mobile', image: 'pubg-mobile.jpg', status: '🔫 Top Up Instan' },
+    { id: 'roblox', name: 'Roblox', image: 'roblox.jpg', status: '🎮 Top Up Instan' },
+    { id: 'genshin', name: 'Genshin Impact', image: 'genshin-impact.jpg', status: '✨ Top Up Instan' },
+    { id: 'telegram', name: 'Telegram Stars', image: 'telegram-stars.jpg', status: '⭐ Top Up Instan' },
+    { id: 'redfinger', name: 'Redfinger Voucher', image: 'redfinger-voucher.jpg', status: '🎟️ Top Up Instan' }
   ];
 
   const prices = {
@@ -284,7 +284,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       card.innerHTML = `
-        <div class="game-icon">${game.icon}</div>
+        <div class="game-icon">
+          <img src="assets/Picture/${game.image}" alt="${game.name}" loading="lazy" onerror="this.src='assets/Picture/default-game.jpg'">
+        </div>
         <div class="game-name">${game.name}</div>
         <div class="game-status">${game.status}</div>
       `;
@@ -316,7 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
     filtered.forEach(game => {
       const item = document.createElement('div');
       item.className = 'search-item';
-      item.innerHTML = `<span class="search-item-icon">${game.icon}</span>${game.name}`;
+      item.innerHTML = `<span class="search-item-icon"><img src="assets/Picture/${game.image}" alt="${game.name}" loading="lazy" onerror="this.src='assets/Picture/default-game.jpg'"></span>${game.name}`;
       item.addEventListener('click', () => {
         document.getElementById('searchInput').value = '';
         dropdown.classList.remove('active');
