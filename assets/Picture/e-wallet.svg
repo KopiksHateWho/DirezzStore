@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a5f47;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d3b2a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="16" fill="url(#grad)" stroke="#d4af85" stroke-width="2"/>
+
+  <g transform="translate(18, 28)">
+    <!-- Back of wallet -->
+    <path d="M4 8 C4 5.79 5.79 4 8 4 H56 C58.21 4 60 5.79 60 8 V12 H58 V8 C58 6.9 57.1 6 56 6 H8 C6.9 6 6 6.9 6 8 V40 C6 41.1 6.9 42 8 42 H56 C57.1 42 58 41.1 58 40 V36 H60 V40 C60 42.21 58.21 44 56 44 H8 C5.79 44 4 42.21 4 40 Z" fill="#d4af85"/>
+    <!-- Front of wallet -->
+    <path d="M60 16 H14 C11.79 16 10 17.79 10 20 V30 C10 32.21 11.79 34 14 34 H60 C62.21 34 64 32.21 64 30 V20 C64 17.79 62.21 16 60 16 Z M56 27 C54.9 27 54 26.1 54 25 C54 23.9 54.9 23 56 23 C57.1 23 58 23.9 58 25 C58 26.1 57.1 27 56 27 Z" fill="#d4af85"/>
+  </g>
+</svg>
