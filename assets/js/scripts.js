@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: 'roblox', name: 'Roblox', image: 'roblox.jpg', status: '🎮 Top Up Instan' },
     { id: 'genshin', name: 'Genshin Impact', image: 'genshin-impact.jpg', status: '✨ Top Up Instan' },
     { id: 'telegram', name: 'Telegram Stars', image: 'telegram-stars.jpg', status: '⭐ Top Up Instan' },
-    { id: 'redfinger', name: 'Redfinger Voucher', image: 'redfinger-voucher.jpg', status: '🎟️ Top Up Instan' }
+    { id: 'redfinger', name: 'Redfinger Voucher', image: 'redfinger-voucher.jpg', status: '🎟️ Top Up Instan' },
+    { id: 'ewallet', name: 'Top Up E-Wallet', image: 'e-wallet.svg', status: 'Top Up Instan' }
   ];
 
   const prices = {
@@ -279,6 +280,8 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', () => window.open('https://direzstore.my.id/telestars', '_blank'));
       } else if (game.id === 'roblox') {
         card.addEventListener('click', () => window.open('https://direz-store-robloxrobux.my.canva.site', '_blank'));
+      } else if (game.id === 'ewallet') {
+        card.addEventListener('click', () => window.open('https://direzstorebydiorezz.my.canva.site/e-wallet', '_blank'));
       } else {
         card.addEventListener('click', () => showPrices(game.id, game.name));
       }
@@ -330,6 +333,8 @@ document.addEventListener('DOMContentLoaded', () => {
           window.open('https://direzstore.my.id/telestars', '_blank');
         } else if (game.id === 'roblox') {
           window.open('https://direz-store-robloxrobux.my.canva.site', '_blank');
+        } else if (game.id === 'ewallet') {
+          window.open('https://direzstorebydiorezz.my.canva.site/e-wallet', '_blank');
         } else {
           showPrices(game.id, game.name);
         }
